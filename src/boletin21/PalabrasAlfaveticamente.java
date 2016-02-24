@@ -7,18 +7,16 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 public class PalabrasAlfaveticamente {
-    private final String[] palabras = new String[10];
+    private final String[] palabras = new String[12];
     
     public void cargarArray(){
         for(int i=0;i<palabras.length;i++){
-            palabras[i]=JOptionPane.showInputDialog("Palabra " + (i+1) + ":");
+            palabras[i]=JOptionPane.showInputDialog("Palabrejos " + (i+1) + ":");
         }
-    }
-    
+    }   
     public void ordenarPalabras(){
         Arrays.sort(palabras);
     }
-    
     public void guardarFichero(){
         ordenarPalabras();
         PrintWriter escritor=null;
@@ -33,4 +31,5 @@ public class PalabrasAlfaveticamente {
             escritor.close();
         }
     }
+    
 }
